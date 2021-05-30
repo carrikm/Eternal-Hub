@@ -1,0 +1,269 @@
+/*
+ 	Carrik McNerlin, last edited 05/29/2021
+	Created 10/14/2020
+
+	This is the complete CSS file of the entire website. Every page will use this to display properly.
+	
+	********************************************Update Log********************************************************
+	Update 05/29/2021
+		-Added media query to handle smaller screens
+		-Added style for ".email" form padding
+		-Centered the title for the email form
+
+	Update 11/18/2020
+		-Added additional comments
+	
+	Update 11/17/2020
+		-Inreased general font size on articles
+	
+	Update 11/01/2020
+		-Added padding to list items for improved spacing/visibility in "Tips" section
+		
+	Update 10/29/2020
+		-Fixed left column art padding
+	
+	Update 10/26/2020
+		-Fixed right column art to float on right edge of page
+		-Fixed footer margins
+		-Migrated art height and width properties to this file
+		
+	Update 10/25/2020
+		-Fixed dropdown menus to display properly
+		
+	Update 10/23/2020
+		-Added footer styles
+		-Changed background color shade of .dropContent and .dropButton:hover to match the footer
+	
+	Update 10/16/2020
+		-Added dropdown menu styles for navigation bar at top of every page
+	
+	Update 10/14/2020
+		-Created separate CSS file from style rules on "index.html"
+	*****************************************End Update Log*******************************************************
+*/
+
+/* Set background color for entire page */
+body {
+	background-color: gray;
+	margin: 0px; /*fixes footer padding margin */
+}
+
+/* 
+	Get rid of the art columns on smaller screens.
+	Changed opacity because the art columns still interfere a bit with the article text using display: none
+*/
+@media only screen and (max-width: 1250px) {
+	div.leftCol {opacity: 0;}
+	div.rightCol {opacity: 0;}
+}
+
+/* 
+	This code is mostly from the W3 Schools page "How to - Hoverable Dropdown."
+*/
+
+
+/* This is what you see on the nav bar */
+.dropButton {
+	background-color: gray;
+	width: 224px;
+	color: cyan;
+	padding: 0px 60px 0px 60px;
+	font-size: 35px;
+	font-family: sans-seriff;  /* Have to specify because it defaults to a different font */
+	border: none;
+}
+
+
+
+/* Tells the <div> container how to show the dropdown content*/
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* This is what displays when you hover over the nav bar buttons */
+.dropContent {
+	display: none;
+	position: absolute;
+	width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* Links in dropdowns */
+.dropContent a {
+	background-color: #303030;
+	color: cyan;
+	width: 200px; /*fix to 200px*/
+	padding: 12px 12px;
+	text-decoration: none;
+	display: block;
+	overflow: auto;
+}
+
+/* Change color of links when you hover over them. */
+.dropContent a:hover {background-color: grey;}
+
+/* Show dropdown menu when you hover over the nav bar. */
+.dropdown:hover .dropContent {display: block;} 
+
+
+/* Change color of navbar buttons when you hover over them*/
+.dropdown:hover .dropButton {background-color: #303030;}
+
+/* 
+	End nav bar features
+*/
+
+
+.container{
+	padding-top: 25px;
+}
+
+/* Notice message at top of some pages if not all content is our own */
+p.disclaimer {
+	font-size: 20px;
+	color: white;
+	margin-left: 10px;
+}
+		
+/* Title of page*/
+h1 {
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+
+/* General links, typically card names */		
+a {	color: cyan; }
+
+
+/* Links to other pages show up a different color */
+a.anotherPage { color: chartreuse; }
+		
+		
+/* Main Content */		
+article {
+	font-size: 30px;
+	color: white;
+}
+
+/* Added to make the spacing look better on "Tips" sections */		
+li {
+	padding-bottom: 10px;
+}	
+
+/* Art column */
+.leftCol {
+	width: 20%;
+	height: 90%;
+	float: left;
+}
+	
+/* Contains article/main content */	
+.midCol {
+	width: 60%;
+	height: 90%;
+	text-align: center;
+	float: left;
+}
+	
+/* Art column */	
+.rightCol {
+	width: 20%;
+	height: 90%;
+	float: left;
+}
+
+/* Right-align images in right column */
+.rightCol img {
+	float: right;
+}
+
+/* This gets rid of padding on images in the column to match up with right column*/
+.leftCol img {
+	float: left;
+}
+
+/* individual images */
+.art {
+	height: 180px;
+	width: 250px;
+}
+
+footer {
+	background-color: #303030;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 100%;
+	height: 100px;
+	
+	/*This is how to make it sit at the bottom*/
+	left: 0;
+	bottom: 0;
+}
+
+/* Contact Form styles */
+.emailContainer{
+	padding-left: 25px;
+	padding-bottom: 25px;
+	width: 400px;
+	max-width: 400px;
+	align-items: center;
+	border-style: 5px solid #303030;
+	border-radius: 8px;
+flex-direction: column;
+}
+
+.requireNotice {
+	color: white;
+	font-size: 15px;
+	text-align: right;
+}
+
+.form-group{
+	width: 100%;
+	border-top: 20px;
+}
+
+.form-group input,
+.form-group textarea{
+	width: 100%;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 8px;
+	border: none;
+}
+
+.emailSubmit{
+	width: 410px;
+	border: 2px black;
+	border-radius: 8px;
+	outline: none;
+	margin-top: 5px;
+	background-color: darkgrey;
+	color: cyan;
+	padding: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.3s ease background-color;
+}
+
+.emailSubmit:hover{
+	background-color: #303030;
+	color: white;
+}
+
+#status{
+	font-size: 25px;
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+
+#status.success{
+	background-color: rgb(27, 187, 12);
+	display: none;
+}

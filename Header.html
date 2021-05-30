@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Carrik McNerlin, last updated 11/13/2020 -->
+	<!-- Created 10/23/2020 -->
+	
+	<!-- This page includes the logo and navigation bar. It is included on every page of the site. -->
+	
+	<!-- *************************************Update Log*******************************************************
+	Update 11/13/2020
+		-Corrected internal links to .php extensions
+		
+	Update 10/23/2020
+		-Created page
+	**************************************End Update Log ****************************************************-->
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+	<!-- Import css file for the page's content -->
+	<link rel="stylesheet" href="article styles.css">
+</head>	
+	
+	
+<body>
+<!-- top of every page -->
+
+<!-- wrapped logo in <a> reference tag to return to home page from any page on site -->
+<a class="anotherPage" href="index.php"><img class="logo" src="artwork/eternal-hub-logo.png" height=125px width=150px></a>
+
+
+<nav class="navbar">
+	<!-- Home tag -->
+	<div class="dropdown">
+		<button class="dropButton" onclick="location.href='index.php'" type="button">Home</button>
+	</div> |
+	
+	
+	<!-- Aggro tag -->
+	<div class="dropdown">
+		<button class="dropButton">Aggro</button>
+		<div class="dropContent">
+			<a class="anotherPage" href="Burn.php">Burn</a>
+			<a class="anotherPage" href="Delver.php">Delver</a>
+			<a class="anotherPage" href="Eldrazi.php">Eldrazi</a>
+		</div> <!--end dropContent -->
+	</div>  |
+	
+	
+	<!-- Midrange tag -->
+	<div class="dropdown">
+		<button class="dropButton">Midrange</button>
+		<div class="dropContent">
+			<a class="anotherPage" href="Cloudpost.php">Cloudpost</a>
+			<a class="anotherPage" href="Death and Taxes.php">Death & Taxes</a>
+			<a class="anotherPage" href="Maverick.php">Maverick</a>
+			<a class="anotherPage" href="Nic Fit.php">Nic Fit</a>
+	</div> <!--end dropContent -->
+	</div>  |
+	
+	
+	<!-- Control tag -->
+	<div class="dropdown">
+		<button class="dropButton">Control</button> 
+		<div class="dropContent">
+			<a class="anotherPage" href="3c Control.php">3-5c Control</a>
+			<a class="anotherPage" href="Miracles.php">Miracles</a>
+			<a class="anotherPage" href="Red Prison.php">Red Prison</a>
+		</div> <!-- end dropContent -->
+	</div>  |
+	
+	
+	<!-- Combo tag -->
+	<div class="dropdown">
+		<button class="dropButton">Combo</button>
+		<div class="dropContent">
+			<a class="anotherPage" href="Dark Depths.php">Dark Depths</a>
+			<a class="anotherPage" href="Elves.php">Elves</a>
+			<a class="anotherPage" href="Lands.php">Lands</a>
+			<a class="anotherPage" href="Reanimator.php">Reanimator</a>
+			<a class="anotherPage" href="Show and Tell.php">Show & Tell</a>
+			<a class="anotherPage" href="TES ANT.php">TES/ANT</a>
+		</div> <!-- end dropContent -->
+	</div>  |
+	
+	
+	
+	<div class="dropdown">
+		<button class="dropButton" onclick="location.href='Contact Us.php'" type="button">Contact</button>
+	</div>
+</nav>
+
+</body>
+</html>
