@@ -23,7 +23,7 @@ if ((isset($_POST['contactName']) && $_POST['contactName'] != '') &&
         $body .= "Message: " . $message . "\r\n";
 
         // send message
-        //mail($sendTo, $subject, $body);
+        mail($sendTo, $subject, $body);
         $messageSent = true;
     } else {
         $messageSent = false;
